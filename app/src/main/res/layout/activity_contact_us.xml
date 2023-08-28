@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactUs">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/toolBarbottomguide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/toolBarbottomguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.11"/>
+
+    <TextView
+        android:id="@+id/txtcontactUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Contact Us"
+        android:textAllCaps="true"
+        android:textColor="@color/green"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBarbottomguide" />
+    
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/txtcontactusleftguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/txtcontactusrightguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"/>
+
+
+    <TextView
+        android:id="@+id/txtmessage"
+        android:layout_width="342dp"
+        android:layout_height="56dp"
+        android:text="Do you have any suggestion or message for us. Please contact us"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/txtcontactusrightguide"
+        app:layout_constraintStart_toStartOf="@id/txtcontactusleftguide"
+        app:layout_constraintTop_toBottomOf="@id/txtcontactUs" />
+
+    <TextView
+        android:id="@+id/txtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Name"
+        android:textAllCaps="true"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/txtcontactusrightguide"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="@id/txtcontactusleftguide"
+        app:layout_constraintTop_toBottomOf="@id/txtmessage" />
+
+    <EditText
+        android:id="@+id/edtname"
+        android:layout_width="338dp"
+        android:layout_height="60dp"
+        android:background="@color/Gray"
+        android:ems="10"
+        android:hint="Enter your name"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/edtnamebottomguide"
+        app:layout_constraintEnd_toEndOf="@id/txtcontactusrightguide"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="@id/txtcontactusleftguide"
+        app:layout_constraintTop_toBottomOf="@id/txtname"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/edtnamebottomguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.372"/>
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Email Address"
+        android:textAllCaps="true"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/txtcontactusrightguide"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="@id/txtcontactusleftguide"
+        app:layout_constraintTop_toTopOf="@id/edtnamebottomguide" />
+
+    <EditText
+        android:id="@+id/edtemail"
+        android:layout_width="338dp"
+        android:layout_height="60dp"
+        android:background="@color/Gray"
+        android:ems="10"
+        android:hint="Enter your Email Address"
+        android:padding="12dp"
+        android:textSize="24dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="@id/edtemailbottomguide"
+        app:layout_constraintEnd_toEndOf="@id/txtcontactusrightguide"
+        app:layout_constraintStart_toStartOf="@id/txtcontactusleftguide"
+        app:layout_constraintTop_toBottomOf="@id/txtEmail"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/edtemailbottomguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtcontact"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="Contact No"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textColor="@color/green"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/txtcontactusrightguide"-->
+<!--        app:layout_constraintHorizontal_bias="0.05"-->
+<!--        app:layout_constraintStart_toStartOf="@id/txtcontactusleftguide"-->
+<!--        app:layout_constraintTop_toTopOf="@id/edtemailbottomguide" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/edtcontact"-->
+<!--        android:layout_width="338dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:background="@color/Gray"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Enter your Contact"-->
+<!--        android:textSize="24dp"-->
+<!--        android:padding="12dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/txtcontactusleftguide"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/txtcontactusrightguide"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/txtcontact"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/edtcontactbottomguide"-->
+<!--        tools:layout_editor_absoluteX="37dp"-->
+<!--        tools:layout_editor_absoluteY="416dp"/>-->
+
+
+    <TextView
+        android:id="@+id/txtmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Message"
+        android:textAllCaps="true"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/txtcontactusrightguide"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="@id/txtcontactusleftguide"
+        app:layout_constraintTop_toBottomOf="@id/edtemailbottomguide" />
+
+    <EditText
+        android:id="@+id/edtmsg"
+        android:layout_width="338dp"
+        android:layout_height="140dp"
+        android:ems="10"
+        android:hint="Enter your Message"
+        android:padding="12dp"
+        android:textSize="24dp"
+        android:background="@color/Gray"
+        app:layout_constraintStart_toStartOf="@id/txtcontactusleftguide"
+        app:layout_constraintEnd_toEndOf="@id/txtcontactusrightguide"
+        app:layout_constraintTop_toBottomOf="@id/txtmsg"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="416dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/edtmsgbottomguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.732"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:text="Submit"
+        android:textAllCaps="true"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/txtcontactusrightguide"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@id/txtcontactusleftguide"
+        app:layout_constraintTop_toTopOf="@id/edtmsgbottomguide" />
+
+    <TextView
+        android:id="@+id/txtfollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do us follow on"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/green"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/btnSubmit"
+        app:layout_constraintEnd_toEndOf="@id/txtcontactusrightguide"
+        app:layout_constraintStart_toStartOf="@id/txtcontactusleftguide"
+        app:layout_constraintBottom_toTopOf="@id/txtfollowbottomguide"
+        tools:layout_editor_absoluteY="607dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/txtfollowbottomguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.865"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity=""
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtcontactusrightguide"
+        app:layout_constraintStart_toStartOf="@+id/txtcontactusleftguide"
+        app:layout_constraintTop_toBottomOf="@id/txtfollowbottomguide">
+
+        <ImageView
+            android:id="@+id/imgfb"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/facebook" />
+
+        <ImageView
+            android:id="@+id/imginsta"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/instagram" />
+
+        <ImageView
+            android:id="@+id/imgtwitter"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/twitter" />
+
+        <ImageView
+            android:id="@+id/imgyoutube"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/youtube" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

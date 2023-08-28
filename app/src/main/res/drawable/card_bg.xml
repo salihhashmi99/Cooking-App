@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+       <item android:height="200dp"
+            android:width="200dp">
+           <inset android:insetTop="50dp">
+           <shape android:shape="rectangle">
+                   <solid android:color="@color/white"/>
+                   <corners android:bottomLeftRadius="1200dp"
+                       android:bottomRightRadius="1200dp"/>
+               </shape>
+           </inset>
+        </item>
+        <item android:width="200dp"
+            android:height="200dp">
+            <inset android:insetBottom="180dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/green"/>
+                    <corners android:bottomLeftRadius="1200dp"
+                        android:bottomRightRadius="1200dp"/>
+                </shape>
+            </inset>
+        </item>
+</layer-list>

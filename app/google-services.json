@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "187636353511",
+    "firebase_url": "https://foodly-708df-default-rtdb.firebaseio.com",
+    "project_id": "foodly-708df",
+    "storage_bucket": "foodly-708df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187636353511:android:0eae8edb71d60ed6109542",
+        "android_client_info": {
+          "package_name": "com.example.lovify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187636353511-c1sd044siqdsamv6hpv93dtocdd8b2ag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLcSkHpLsz-gVTw47VPhOyacT8rjP13BY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187636353511-c1sd044siqdsamv6hpv93dtocdd8b2ag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/green" /> <!-- Fill color of the background shape -->
+        </shape>
+    </item>
+
+
+    <!-- Concave shape to clip the background -->
+    <item> <!-- Adjust the top value to control the depth of the concave part -->
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" /><!-- Transparent color to create a concave effect -->
+            <padding android:right="50dp"/>
+            <corners android:topLeftRadius="2000dp" /> <!-- Make sure this radius matches the background shape's corner radius -->
+        </shape>
+    </item>
+</layer-list>

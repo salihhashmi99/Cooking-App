@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:useDefaultMargins="true"
+            android:padding="15dp"
+            android:columnCount="2"
+            android:rowCount="4">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnBurgerCard"
+                android:layout_width="150dp"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_margin="3dp"
+                app:cardCornerRadius="10dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_height="150dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="7"
+                        app:srcCompat="@drawable/burger"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@color/green"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/burger"/>
+
+                </LinearLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnBiryaniCard"
+                android:layout_width="150dp"
+                android:layout_column="1"
+                android:layout_margin="3dp"
+                android:layout_row="0"
+                app:cardCornerRadius="10dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_height="150dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="7"
+                        app:srcCompat="@drawable/biryani"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@color/green"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/biryani"/>
+
+                </LinearLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnMilkshakeCard"
+                android:layout_width="150dp"
+                android:layout_column="0"
+                android:layout_row="1"
+                app:cardCornerRadius="10dp"
+                android:layout_rowWeight="1"
+                android:layout_margin="3dp"
+                android:layout_columnWeight="1"
+                android:layout_height="150dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="7"
+                        app:srcCompat="@drawable/milkshake"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@color/green"
+                        android:maxLines="1"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/milkShake"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnPastaCard"
+                android:layout_width="150dp"
+                android:layout_column="1"
+                android:layout_margin="3dp"
+                android:layout_row="1"
+                app:cardCornerRadius="10dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_height="150dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="7"
+                        app:srcCompat="@drawable/spaguetti"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@color/green"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/pasta"/>
+
+                </LinearLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnSamosaCard"
+                android:layout_width="150dp"
+                android:layout_margin="3dp"
+                android:layout_column="0"
+                android:layout_row="2"
+                app:cardCornerRadius="10dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_height="150dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="7"
+                        app:srcCompat="@drawable/samosa"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@color/green"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/samosa"/>
+
+                </LinearLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnCupCakeCard"
+                android:layout_width="150dp"
+                android:layout_column="1"
+                android:layout_margin="3dp"
+                android:layout_row="2"
+                app:cardCornerRadius="10dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_height="150dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="7"
+                        app:srcCompat="@drawable/cupcake"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@color/green"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/cupCake"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnLadduCard"
+                android:layout_width="150dp"
+                android:layout_column="0"
+                android:layout_row="3"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="3dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_height="150dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="7"
+                        app:srcCompat="@drawable/laddu"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@color/green"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/laddu"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+<!--            done?   yup-->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnPizzaCard"
+                android:layout_width="150dp"
+                android:layout_column="1"
+                android:layout_row="3"
+                app:cardCornerRadius="10dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="3dp"
+                android:layout_height="150dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="7"
+                        app:srcCompat="@drawable/pizza"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@color/green"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/pizza"/>
+
+                </LinearLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

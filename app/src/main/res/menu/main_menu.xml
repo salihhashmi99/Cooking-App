@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="none">
+        <item android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/ic_baseline_home_24"/>
+        <item android:id="@+id/aboutus"
+            android:title="About Us"
+            android:icon="@drawable/ic_baseline_person_24"/>
+        <item android:id="@+id/feedback"
+            android:title="Feedback"
+            android:icon="@drawable/ic_baseline_feedback_24"/>
+        <item android:id="@+id/nav_contactus"
+            android:title="Contact Us"
+            android:icon="@drawable/ic_baseline_contacts_24"/>
+    </group>
+
+    <group android:checkableBehavior="none">
+
+        <item android:title="Profile">
+            <menu>
+                <item android:id="@+id/nav_login"
+                    android:title="Login"
+                    android:icon="@drawable/ic_baseline_login_24"/>
+                <item android:id="@+id/nav_profile"
+                    android:title="Profile"
+                    android:icon="@drawable/ic_baseline_person_pin_24"/>
+                <item android:id="@+id/nav_logout"
+                    android:title="Logout"
+                    android:icon="@drawable/ic_baseline_logout_24"/>
+
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:title="Share"
+                android:icon="@drawable/ic_baseline_share_24"/>
+            <item
+                android:id="@+id/nav_rateus"
+                android:title="Rate Us"
+                android:icon="@drawable/ic_baseline_star_rate_24"/>
+        </menu>
+    </item>
+
+</menu>
