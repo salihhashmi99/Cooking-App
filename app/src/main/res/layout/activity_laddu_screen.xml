@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BurgerScreen">
+    tools:context=".LadduScreen">
 
     <include
         android:id="@+id/toolBar"
@@ -46,7 +46,7 @@
                 android:id="@+id/txtpasta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Burger"
+                android:text="Laddu"
                 android:layout_marginTop="7dp"
                 android:textAllCaps="true"
                 android:textColor="@color/green"
@@ -75,6 +75,4 @@
 
     </androidx.core.widget.NestedScrollView>
 
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

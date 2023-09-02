@@ -15,6 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
@@ -50,6 +51,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtparaAboutus"
         app:layout_constraintVertical_bias="0.0">
+
+        <!--abhi main burger ki trah ki baki screens b draw krta hu ok-->
 
         <TextView
             android:id="@+id/txtparagraph"

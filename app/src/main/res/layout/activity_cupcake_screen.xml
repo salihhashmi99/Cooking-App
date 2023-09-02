@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BurgerScreen">
+    tools:context=".CupcakeScreen">
 
     <include
         android:id="@+id/toolBar"
@@ -31,7 +31,6 @@
                 android:orientation="horizontal"
                 app:layout_constraintGuide_percent="0.4"/>
 
-
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/vpgr"
                 android:layout_width="match_parent"
@@ -43,10 +42,10 @@
             </androidx.viewpager.widget.ViewPager>
 
             <TextView
-                android:id="@+id/txtpasta"
+                android:id="@+id/txtCupcake"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Burger"
+                android:text="Cupcake"
                 android:layout_marginTop="7dp"
                 android:textAllCaps="true"
                 android:textColor="@color/green"
@@ -57,7 +56,7 @@
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
-                android:id="@+id/txtPastaRecipe"
+                android:id="@+id/txtCupcakeRecipe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -68,13 +67,11 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtpasta" />
+                app:layout_constraintTop_toBottomOf="@id/txtCupcake" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.core.widget.NestedScrollView>
 
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

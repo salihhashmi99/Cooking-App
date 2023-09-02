@@ -41,11 +41,11 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
 
-        //Add on Click Listener on the Burger Button
+        //Add on Click Listener on the Pizza Button
         binding.btnBurgerCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
+                Intent intent = new Intent(getApplicationContext(), PizzaScreen.class);
                 startActivity(intent);
                 finish();
             }
@@ -55,7 +55,7 @@ public class HomeScreen extends AppCompatActivity {
         binding.btnBiryaniCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
+                Intent intent = new Intent(getApplicationContext(), BiryaniScreen.class);
                 startActivity(intent);
                 finish();
             }
@@ -65,7 +65,7 @@ public class HomeScreen extends AppCompatActivity {
         binding.btnMilkshakeCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
+                Intent intent = new Intent(getApplicationContext(), MilkshakeScreen.class);
                 startActivity(intent);
                 finish();
             }
@@ -75,7 +75,7 @@ public class HomeScreen extends AppCompatActivity {
         binding.btnPastaCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
+                Intent intent = new Intent(getApplicationContext(), PastaScreen.class);
                 startActivity(intent);
                 finish();
             }
@@ -85,17 +85,17 @@ public class HomeScreen extends AppCompatActivity {
         binding.btnSamosaCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
+                Intent intent = new Intent(getApplicationContext(), SamosaScreen.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-        //Add on Click Listener on the Cupcake Button
+        //Add on Click Listener on the Burger Button
         binding.btnBurgerCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
+                Intent intent = new Intent(HomeScreen.this, BurgerScreen.class);
                 startActivity(intent);
                 finish();
             }
@@ -105,17 +105,17 @@ public class HomeScreen extends AppCompatActivity {
         binding.btnLadduCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
+                Intent intent = new Intent(getApplicationContext(), LadduScreen.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-        //Add on Click Listener on the Pizza Button
+        //Add on Click Listener on the Cupcake Button
         binding.btnPizzaCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
+                Intent intent = new Intent(getApplicationContext(), CupcakeScreen.class);
                 startActivity(intent);
                 finish();
             }
@@ -130,8 +130,7 @@ public class HomeScreen extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.nav_home:{
-                        Toast.makeText(getApplicationContext(), item.getTitle(), Toast.LENGTH_SHORT).show();
-                        //Yahan par wo code aay ga jo home k click par karna hai!
+                        Toast.makeText(HomeScreen.this, "You are already on Home Screen", Toast.LENGTH_SHORT).show();
                     };
                     case R.id.aboutus:{
                         Intent intent = new Intent(getApplicationContext(), AboutUS.class);
@@ -149,7 +148,7 @@ public class HomeScreen extends AppCompatActivity {
                         {
                             showAlreadyRatedMessage();
                         }
-//                        Toast.makeText(getApplicationContext(), item.getTitle(), Toast.LENGTH_SHORT).show();
+
                     };
                     case R.id.nav_contactus:{
                         Intent intent = new Intent(getApplicationContext(), ContactUs.class);
@@ -157,7 +156,7 @@ public class HomeScreen extends AppCompatActivity {
                         finish();
                     }
                     case R.id.nav_login:{
-                        Toast.makeText(getApplicationContext(), item.getTitle(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(HomeScreen.this, "You are already logged in", Toast.LENGTH_SHORT).show();
                     };
                     case R.id.nav_logout:{
                         mAuth.signOut();
@@ -170,12 +169,7 @@ public class HomeScreen extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), item.getTitle(), Toast.LENGTH_SHORT).show();
                     };
                     case R.id.nav_share:{
-                        Intent shareIntent = new Intent();
-                        shareIntent.setAction(Intent.ACTION_SEND);
-                        shareIntent.putExtra(Intent.EXTRA_TEXT, textView.getText().toString());
-                        shareIntent.setType("text/plain");
-                        shareIntent = Intent.createChooser(shareIntent, "Share Via");
-                        startActivity(shareIntent);
+                        shareApp();
                     }
                 }
                 return true;
@@ -192,5 +186,18 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
         popupMenu.show();
+    }
+
+    private void shareApp() {
+        try {
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
+            shareIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name));
+            String shareMessage = "Let me recommend you this application";
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+            startActivity(Intent.createChooser(shareIntent, "choose one"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
